@@ -32,7 +32,8 @@ public class Semestar {
     }
 
 
-    public void selectSubject(){
+    public void selectSubject(Student novi){
+        allStudents.add(novi);
         ArrayList<IzborniPredmet> choose = new ArrayList<IzborniPredmet>();
         choose = PlanStudija.getIzborniPredmeti();
         System.out.print("Izaberite predmete koji nose najmanje "+(30-brojEctsObaveznih)+ " bodova(0 da završite):");
@@ -44,7 +45,10 @@ public class Semestar {
            izbor = ulaz.nextInt();
            if(izbor == 0 && ukupanBrojEcts < 30)System.out.println("Vaš broj ECTS bodova je manji od 30, molim izaberite još premeta.");
            else if(izbor == 0 && ukupanBrojEcts >= 30)break;
-           else ukupanBrojEcts += choose.get(izbor).getBrojEcts();
+           else{
+               ukupanBrojEcts += choose.get(izbor).getBrojEcts();
+               choose.get(izbor).studentsListening.add(novi);
+           }
        }
     }
 

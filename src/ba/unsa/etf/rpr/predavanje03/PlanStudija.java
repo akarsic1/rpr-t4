@@ -7,6 +7,11 @@ public class PlanStudija {
     ArrayList<ObavezniPredmet> obavezniPredmeti = new ArrayList<ObavezniPredmet>();
     static ArrayList<IzborniPredmet> izborniPredmeti = new ArrayList<IzborniPredmet>();
 
+    public PlanStudija(String nameOfMajor, ArrayList<ObavezniPredmet> obavezniPredmeti) {
+        this.nameOfMajor = nameOfMajor;
+        this.obavezniPredmeti = obavezniPredmeti;
+    }
+
     public String getNameOfMajor() {
         return nameOfMajor;
     }
