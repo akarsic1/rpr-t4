@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class PlanStudija {
     String nameOfMajor ;
     ArrayList<ObavezniPredmet> obavezniPredmeti = new ArrayList<ObavezniPredmet>();
-    ArrayList<IzborniPredmet> izborniPredmeti = new ArrayList<IzborniPredmet>();
+    static ArrayList<IzborniPredmet> izborniPredmeti = new ArrayList<IzborniPredmet>();
 
     public String getNameOfMajor() {
         return nameOfMajor;
@@ -23,9 +23,10 @@ public class PlanStudija {
         this.obavezniPredmeti = obavezniPredmeti;
     }
 
-    public ArrayList<IzborniPredmet> getIzborniPredmeti() {
+    public static ArrayList<IzborniPredmet> getIzborniPredmeti() {
         return izborniPredmeti;
     }
+
 
     public void setIzborniPredmeti(ArrayList<IzborniPredmet> izborniPredmeti) {
         this.izborniPredmeti = izborniPredmeti;
